@@ -1,0 +1,100 @@
+@use '../global' as g;
+
+.l-mv {
+  background: var(--light-navy);
+  height: 580px;
+  margin-top: 72px;
+  @include g.tab {
+    height: 723px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include g.sp {
+  
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 515px;
+    grid-template-rows: auto auto;
+    max-width: 1187px;
+    width: 100%;
+    margin: 0 auto;
+    height: inherit;
+    @include g.tab {
+      display: block;
+      padding-top: 60px;
+    }
+  }
+
+  &__cont {
+    grid-column: 1 / 2;
+    grid-row:1 / 2;
+    align-self: flex-end;
+  }
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: calc(87 / 60);
+    font-size: clamp(30px, 4.16vw, 60px);
+    min-height: 0;
+
+  }
+
+  &__lead {
+    font-size: 1.8rem;
+    line-height: calc(32 / 18);
+    margin-top: 4px;
+    @include g.sp {
+      font-size: 1.6rem;
+      margin-top: 10px;
+    }
+  }
+
+  &__btnArea {
+    display: flex;
+    margin-top: 33px;
+    grid-column: 1 / 2;
+    grid-row:2 / 3;
+    @include g.tab {
+      justify-content: center;
+      margin-top: -20px;
+    }
+    @include g.sp{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    
+    & + & {
+      margin-left: 37px;
+      @include g.sp {
+        margin-left: 0;
+        margin-top: 32px;
+      }
+    }
+    a {
+
+    }
+  }
+
+  &__thumb {
+    max-width: 515px;
+    grid-column: 2 / 3;
+    grid-row:1 / 3;
+    align-self: center;
+    @include g.tab {
+      max-width:405px;
+      margin-inline: auto;
+      margin-top: -20px;
+    }
+    @include g.sp {
+      max-width: 305px;
+    }
+    img {
+
+    }
+  }
+}

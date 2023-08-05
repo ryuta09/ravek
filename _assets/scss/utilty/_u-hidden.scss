@@ -1,0 +1,15 @@
+@use '../global' as g;
+
+.u-hidden-pc {
+  display: none;
+  @include g.sp {
+    display: block;
+  }
+}
+
+.u-hidden-sp {
+  display: block;
+  @include g.sp {
+    display: none;
+  }
+}

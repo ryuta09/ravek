@@ -1,0 +1,34 @@
+@use '../global' as g;
+
+.p-about {
+  text-align: center;
+}
+
+.p-about__inner {
+  max-width: 860px;
+  width: 100%;
+  margin-inline: auto;
+  margin-top: 29px;
+
+}
+
+.p-about__textArea {
+  p {
+    font-size: 1.8rem;
+    line-height: calc(32 / 18);
+    &:nth-child(n + 2) {
+      margin-top: 1em;
+    }
+    @include g.sp {
+      font-size: 1.6rem;
+    }
+  }
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.p-about__btn {
+  margin-top: 40px;
+}

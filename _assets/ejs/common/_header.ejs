@@ -1,0 +1,61 @@
+<% let title = (pageId === 'home') ? jsonData.siteInfo.name : jsonData.pages[pageId].name + ' | '  + jsonData.siteInfo.name%>
+<% let description = jsonData.pages[pageId].description %>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width">
+  <link rel="apple-touch-icon" href="/img/common/apple-touch-icon.png">
+
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= description %>">
+  <meta property="og:url" content="<%= jsonData.siteInfo.siteUrl + jsonData.pages[pageId].slug %>">
+  <meta property="og:type" content="<%= jsonData.pages[pageId].type %> ">
+  <meta property="og:local" content="ja_JP">
+  <meta property="og:image" content="/common/og-image.jpg">
+  <meta property="og:site_name" content="<%= jsonData.siteInfo.siteUrl %> ">
+  <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css">
+  <link rel="stylesheet" href="https://use.typekit.net/tug4wse.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="/js/common.js" defer></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous" defar></script>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <header class="l-header j-header">
+      <div class="l-header__inner">
+        <h1 class="l-header__logo"><a href=""><img src="../../img/ttl-logo.svg" width="83" height="28" alt="Ravek"></a></h1>
+        <nav class="l-header__nav">
+          <ul class="l-header__list">
+            <li class="l-header__item"><a href="#about">特長</a></li>
+            <li class="l-header__item"><a href="#users">導入実績</a></li>
+            <li class="l-header__item"><a href="#flow">導入までの流れ</a></li>
+            <li class="l-header__item"><a href="#price">料金プラン</a></li>
+            <li class="l-header__item"><a href="#qa">よくある質問</a></li>
+            <li class="l-header__item-btn l-header__item-btn--pc"><a href="#" class="c-btn__small">無料で使ってみる</a></li>
+            <li class="l-header__item-btn"><a href="#" class="c-btn__medium">資料をダウンロードする</a></li>
+            <li class="l-header__item-btn"><a href="#" class="c-btn__medium--white">資料をダウンロードする</a></li>
+          </ul>
+        </nav>
+
+        <button class="l-header__hamburger j-header__btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+   

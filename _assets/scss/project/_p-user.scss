@@ -1,0 +1,41 @@
+@use '../global' as g;
+
+.p-user {
+  &__inner {
+    max-width: 972px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    @include g.sp {
+      margin-top: 24px;
+    }
+  }
+
+  &__item {
+    width: calc(25% - 40px * 3 / 4);
+    @include g.sm {
+      width: calc(25% - 11px * 3 / 4);
+    }
+    &:not(:nth-child(4n + 1)) {
+      margin-left: 40px;
+      @include g.sm {
+        margin-left: 11px;
+      }
+    }
+    &:nth-child(n + 5) {
+      margin-top: 50px;
+      @include g.sm {
+        margin-top: 13px;
+      }
+    }
+    img {
+
+    }
+  }
+
+}

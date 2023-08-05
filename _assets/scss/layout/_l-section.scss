@@ -1,0 +1,8 @@
+@use '../global' as g;
+
+.l-section {
+  padding: 100px 20px;
+  @include g.sp {
+    padding:60px 0;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "siteInfo": {
+    "name": "Ravek",
+    "siteUrl": "サイトのドメイン"
+  },
+  "pages": {
+    "home": {
+      "name": "トップページ",
+      "description": "トップページの説明",
+      "type": "website",
+      "slug": "/"
+    }
+  }
+}

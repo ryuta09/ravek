@@ -1,0 +1,27 @@
+@use "sass:math";
+
+@mixin pc($width: 1025px) {
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}
+
+@mixin tab($width: 1024px) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin sp($width: 768px) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin sm($width: 576px) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+

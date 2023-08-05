@@ -1,0 +1,232 @@
+@use '../global' as g;
+
+.p-price {
+
+  &__inner {
+    max-width: 1020px;
+    margin-inline: auto;
+    overflow-x: scroll;
+    @include g.sp {
+      max-width: 727px;
+    }
+  }
+
+  &__wrapper {
+    width: 1020px;
+    overflow-x: auto;
+    @include g.sp {
+      width: 727px;
+      position: relative;
+      &::after {
+        content:'';
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 20px;
+        height: 100%;
+      }
+    }
+  }
+
+  &-top__items {
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   margin-top: 62px;
+  }
+
+  &-top__item {
+    text-align: center;
+    background: var(--base-black);
+    flex: 0 0 260px;
+    padding:47px 13px 41px;
+    &:nth-child(2) {
+      background: var(--main-color);
+      padding-top: 58px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.6);
+      .p-price-top__price {
+        font-size: 2.4rem;
+        @include g.sp {
+          font-size: 1.2rem;
+        }
+        span {
+          font-size: 4.2rem;
+          @include g.sp {
+            font-size: 3.6rem;
+          }
+        }
+       
+      }
+    }
+    @include g.sp {
+      flex: 0 0 180px;
+      padding:28px 7px;
+    }
+  }
+  &-top__label {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-white);
+    @include g.sp {
+      font-size: 2rem;
+    }
+  }
+
+  &-top__price {
+    color: var(--color-white);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 17px;
+    @include g.sp {
+      font-size: 1.2rem;
+    }
+    span {
+      font-size: 3.6rem;
+      @include g.sp {
+        font-size: 3rem;
+      }
+    }
+  }
+  
+  &-top__btn {
+    margin-top: 28px;
+
+  }
+
+  &__table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+      th {
+        color:var(--color-white);
+      }
+
+    tbody {
+      tr {
+        height: 60px;
+        @include g.sp {
+          height: 42px;
+        }
+        &:nth-child(odd) {
+          background: var(--light-navy);
+        }
+        th {
+          font-size: 2.2rem;
+          color:var(--base-black);
+          text-align: left;
+          padding-left: 32px;
+          font-weight: normal;
+          width: 240px;
+          @include g.sp {
+            font-size: 1.5rem;
+            padding-left: 18px;
+            width: 150px;
+          }
+         }
+         td {
+          font-size: 1.8rem;
+          width: 260px;
+          @include g.sp {
+            font-size: 1.4rem;
+            width: 145px;
+          }
+         }
+         & .p-price__weight {
+          font-weight: 700;
+          position: relative;
+          font-size: 2.4rem;
+          @include g.sp {
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      th,td {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 14px;
+    margin-top: 16px;
+    
+  }
+
+  &__btnWrapper {
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+  }
+
+  &__btn {
+   
+    max-width: 234px;
+    width: 100%;
+    margin-inline: auto;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color:var(--base-black);
+    background: var(--color-white);
+    padding: 16px 41px;
+    border:2px solid transparent;
+    transition: all .2s ease;
+    &:hover {
+      color:var(--color-white);
+      background: var(--base-black);
+      border-color: var(--color-white);
+    }
+    @include g.sp {
+      padding:12px 15px;
+      font-size: 1.6rem;
+    }
+
+    &--trans {
+      @extend .p-price__btn;
+      background:transparent;
+      color:var(--color-white);
+      border-color:var(--color-white);
+      &:hover {
+        color:var(--main-color);
+        background: var(--color-white);
+      }
+    }
+
+    &--navy {
+      @extend .p-price__btn;
+      color:var(--color-white);
+      background: var(--main-color);
+      border:2px solid transparent;
+      &:hover {
+        color: var(--main-color);
+        background: transparent;
+        border-color: currentColor;
+      }
+    }
+
+    &--white {
+      @extend .p-price__btn;
+      color:var(--base-black);
+      border:2px solid var(--base-black);
+    }
+  }
+
+}
+
+
+
+// .p-price__circle {
+//   font-size: 2.4rem;
+//   font-weight: 700;
+//   @include g.sp {
+//     font-size: 1.8rem;
+//   }
+// }

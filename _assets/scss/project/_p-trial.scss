@@ -1,0 +1,24 @@
+@use '../global' as g;
+
+.p-trial {
+  text-align: center;
+  padding: 60px 0;
+  background: var(--base-black);
+  &__title {
+    color:var(--color-white);
+    font-size: 3.6rem;
+    line-height: calc(52 / 36);
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    span {
+      display: block;
+    }
+    @include g.sp {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 32px;
+  }
+}

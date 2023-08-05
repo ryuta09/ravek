@@ -1,0 +1,51 @@
+@use '../global' as *;
+
+@include pc {
+  .pc {
+    margin:0;
+  }
+}
+@include tab {
+  .tab {
+    margin:0;
+  }
+  
+}
+@include sp {
+  .sp {
+    margin:0;
+  }
+}
+@include sm {
+  .sm {
+    margin:0;
+  }
+}
+
+
+
+html {
+	text-size-adjust: 100%;
+  font-size: 10px;
+
+}
+
+body {
+  font-size: 62.5%;
+  font-family:var(--ff-notoJp);
+}
+
+a {
+  color: #333;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.is-hidden {
+  overflow: hidden;
+}
+
